@@ -1,2 +1,5 @@
-<%= @user.name %>, <%= @user.email %>
+<h1>
+  <%= gravatar_image_tag @user.email %>
+  <%= @user.name %>
+</h1>
 
