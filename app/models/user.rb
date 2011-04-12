@@ -44,14 +44,19 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
 
+  def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
+  end
+
   private
 
     #def encrypt_password
       # if we ommitted self.Ruby would create a local variable called
-      # encrypted_password, which isn’t what we want at all.
+      # encrypted_password, which isn't what we want at all.
       #self.encrypted_password = encrypt(self.password)
     #  self.encrypted_password = encrypt(password) # we could have used self.password
-      # (Of course, as we’ve noted, the self is not optional when
+      # (Of course, as we've noted, the self is not optional when
       # assigning to an attribute, so we have to write self.encrypted_password
       # in this case.)
     #end
