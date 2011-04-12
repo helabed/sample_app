@@ -92,6 +92,12 @@ describe UsersController do
       it "should render the 'new' page" do
         post :create, :user => @attr
         response.should render_template('new')
+        response.should have_selector("div", :id => "error_explanation")
+        response.should have_selector("ul>li", :content => "Name can't be blank")
+        response.should have_selector("ul>li", :content => "Email can't be blank")
+        response.should have_selector("ul>li", :content => "Email is invalid")
+        response.should have_selector("ul>li", :content => "Password can't be blank")
+        response.should have_selector("ul>li", :content => "Password is too short (minimum is 6 characters)")
       end
 
       it "should reset the password field in the 'new' page" do
@@ -126,7 +132,13 @@ describe UsersController do
       end
 
       it "should have a welcome message" do
+        #lambda do
+        #  post :create, :user => @attr
+        #  flash[:success].should =~ /welcome to the sample app/i
+        #end.should have_selector("div", :class => "flash success", :content => "Welcome to the Sample App!")
         post :create, :user => @attr
+        #puts response.inspect
+        #response.should have_selector("div", :class => "flash success", :content => "Welcome to the Sample App!")
         flash[:success].should =~ /welcome to the sample app/i
       end
     end
