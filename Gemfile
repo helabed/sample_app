@@ -4,14 +4,14 @@ gem 'rails', '3.0.6'
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0'
 gem 'will_paginate', '3.0.pre2'
-gem 'linecache19'
+#gem 'linecache19'    #heroku still using Ruby 1.8.7
 gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
-  gem 'ruby-debug19'
+  #gem 'ruby-debug19'  #heroku still using Ruby 1.8.7
   gem 'web-app-theme'
   gem 'heroku'
   gem 'looksee'
@@ -19,7 +19,7 @@ group :development, :test do
   gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
   gem 'factory_girl_rails', '1.0'
-  gem 'shoulda'
+  #gem 'shoulda'
   #gem 'cucumber-rails'
   #gem 'capybara'
   gem 'database_cleaner'
