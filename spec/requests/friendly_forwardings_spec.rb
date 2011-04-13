@@ -8,7 +8,7 @@ describe "FriendlyForwardings" do
     visit edit_user_path(user)
     # The test automatically follows the redirect to the signin page.
     # the integration test follows redirects, so testing that the
-    # response should redirect_to some URL won’t work.
+    # response should redirect_to some URL won't work.
     # I learned this the hard way
     fill_in :email,    :with => user.email
     fill_in :password, :with => user.password
