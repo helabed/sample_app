@@ -68,13 +68,11 @@ describe "Users" do
       response.should have_selector("a", :content => "delete")
     end
 
-
     it "should not show 'delete' link for non-admins" do
       user = Factory(:user, :admin => false)
       integration_sign_in user
       visit users_path
       response.should_not have_selector("a", :content => "delete")
     end
-
   end
 end
