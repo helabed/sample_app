@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_filter :admin_user,   :only => :destroy
 
   def new
+    redirect_to root_path if signed_in?
     @user = User.new
     @title = 'Sign up'
   end
@@ -21,17 +22,24 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      # Handle a successful save.
-      sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+    # WHY did this fail on me
+    #redirect_to root_path if signed_in?
+    # AND I had to use the if..else..end statement below ??
+    if signed_in?
+      redirect_to root_path if signed_in?
     else
-      @title = "Sign up"
-      @user.password = ''
-      @user.password_confirmation = ''
-      render 'new'
+      @user = User.new(params[:user])
+      if @user.save
+        # Handle a successful save.
+        sign_in @user
+        flash[:success] = "Welcome to the Sample App!"
+        redirect_to @user
+      else
+        @title = "Sign up"
+        @user.password = ''
+        @user.password_confirmation = ''
+        render 'new'
+      end
     end
   end
 

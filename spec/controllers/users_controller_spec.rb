@@ -33,6 +33,13 @@ describe UsersController do
       get :new
       response.should have_selector("input[name='user[password_confirmation]'][type='password']")
     end
+
+    it "should redirect to root if user already signed-in" do
+      @user = Factory(:user)
+      test_sign_in(@user)
+      get :new
+      response.should redirect_to(root_path)
+    end
   end
 
   describe "GET 'show'" do
@@ -146,6 +153,13 @@ describe UsersController do
         post :create, :user => @attr
         controller.should be_signed_in
       end
+    end
+
+    it "should redirect to root if user already signed-in" do
+      @user = Factory(:user)
+      test_sign_in(@user)
+      post :create, :user => @user
+      response.should redirect_to(root_path)
     end
   end
 
