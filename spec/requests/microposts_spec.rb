@@ -34,7 +34,42 @@ describe "Microposts" do
           fill_in :micropost_content, :with => content
           click_button
           response.should have_selector("span.content", :content => content)
+          # Test pluralization here, for a single post
+          response.should have_selector("span.microposts", :content => "1 micropost\n")
         end.should change(Micropost, :count).by(1)
+      end
+
+      it "should pluralize microposts" do
+        content1 = "Lorem ipsum dolor sit amet"
+        content2 = "my wonderful content"
+        lambda do
+          visit root_path
+          fill_in :micropost_content, :with => content1
+          click_button
+          response.should have_selector("span.content", :content => content1)
+          fill_in :micropost_content, :with => content2
+          click_button
+          response.should have_selector("span.content", :content => content2)
+          response.should have_selector("span.microposts", :content => "2 microposts")
+        end.should change(Micropost, :count).by(2)
+      end
+
+      it "should paginate microposts" do
+        lambda do
+          visit root_path
+          (1..40).each do |num|
+            content = "my wonderfu content item #{num}"
+            fill_in :micropost_content, :with => content
+            click_button
+            response.should have_selector("span.content", :content => content)
+          end
+          response.should have_selector("span.microposts", :content => "40 microposts")
+          response.should have_selector("div.pagination>a.next_page", :content => "Next")
+          click_link "Next"
+          response.should have_selector("div.pagination>a.previous_page", :content => "Previous")
+          click_link "Previous"
+          response.should have_selector("div.pagination>a.next_page", :content => "Next")
+        end.should change(Micropost, :count).by(40)
       end
     end
   end
