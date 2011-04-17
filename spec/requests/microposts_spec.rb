@@ -55,7 +55,7 @@ describe "Microposts" do
         lambda do
           visit root_path
           (1..40).each do |num|
-            content = "my wonderfu content item #{num}"
+            content = "my wonderful content item #{num}"
             fill_in :micropost_content, :with => content
             click_button
             response.should have_selector("span.content", :content => content)
@@ -68,6 +68,28 @@ describe "Microposts" do
           response.should have_selector("div.pagination>a.next_page", :content => "Next")
         end.should change(Micropost, :count).by(40)
       end
+    end
+  end
+
+  describe "micropost delete link" do
+
+    it "should show 'delete' link for current_user" do
+      visit root_path
+      content = "my wonderful content item"
+      fill_in :micropost_content, :with => content
+      click_button
+      response.should have_selector("a", :content => "delete")
+    end
+
+    it "should not show 'delete' link for different user" do
+      visit root_path
+      content = "my wonderful content item"
+      fill_in :micropost_content, :with => content
+      click_button
+      wrong_user = Factory(:user, :email => 'user@example.net')
+      integration_sign_in wrong_user
+      visit root_path
+      response.should_not have_selector("a", :content => "delete")
     end
   end
 end
