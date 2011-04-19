@@ -1,3 +1,2 @@
 jQuery("#follow_form").html("<%= escape_javascript(render('users/unfollow')) %>")
-jQuery("#followers").html('<%= "#{@user.followers.count} followers" %>')
-
+jQuery("#followers").hide().html('<%= "#{@user.followers.count} followers" %>').fadeIn('slow');
