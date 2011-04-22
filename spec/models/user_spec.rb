@@ -257,6 +257,20 @@ describe User do
       @user.follow!(@followed)
       @followed.followers.should include(@user)
     end
+
+    it "should destroy associated relatioinships" do
+      user_john = Factory(:user, :email => Factory.next(:email), :name => 'john')
+      user_tom  = Factory(:user, :email => Factory.next(:email), :name => 'tom')
+      rel_1 = @user.follow!(user_john)
+      rel_2 = @user.follow!(user_tom)
+      lambda do
+        @user.destroy
+        [rel_1, rel_2].each do |rel|
+          Relationship.find_by_follower_id(rel.follower_id).should be_nil
+        end
+        Relationship.find_by_followed_id(@user.id).should be_nil
+      end.should change(Relationship, :count).by(-2)
+    end
   end
 
 
