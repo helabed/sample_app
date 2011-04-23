@@ -1,0 +1,1074 @@
+Script started on Sat Apr 23 13:28:22 2011
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ ll
+total 2320
+-rw-r--r--   1 helabed  staff   1.2K Apr 13 16:18 Gemfile
+-rw-r--r--   1 helabed  staff   3.3K Apr 13 16:18 Gemfile.lock
+-rw-r--r--   1 helabed  staff   214B Feb  8 16:33 README.markdown
+-rw-r--r--   1 helabed  staff   269B Feb  8 16:26 Rakefile
+drwxr-xr-x   7 helabed  staff   238B Apr 21 22:03 app
+drwxr-xr-x  10 helabed  staff   340B Apr 18 15:02 config
+-rw-r--r--   1 helabed  staff   159B Feb  8 16:26 config.ru
+drwxr-xr-x   7 helabed  staff   238B Apr 23 12:56 db
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 doc
+-rw-r--r--   1 helabed  staff    43B Apr 23 13:28 hanis_ch_4_script_log_file.log
+drwxr-xr-x   3 helabed  staff   102B Apr 15 15:54 lib
+drwxr-xr-x   6 helabed  staff   204B Feb  8 16:26 log
+drwxr-xr-x  11 helabed  staff   374B Apr 15 15:52 public
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 script
+drwxr-xr-x   7 helabed  staff   238B Apr 21 22:41 spec
+drwxr-xr-x   7 helabed  staff   238B Apr 13 15:35 tmp
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 vendor
+-rw-r--r--   1 helabed  staff   1.1M Apr 23 12:46 webrat.log
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ gem list
+
+*** LOCAL GEMS ***
+
+abstract (1.0.0)
+actionmailer (3.0.6)
+actionpack (3.0.6)
+activemodel (3.0.6)
+activerecord (3.0.6)
+activeresource (3.0.6)
+activesupport (3.0.6)
+annotate-models (1.0.4)
+archive-tar-minitar (0.5.2)
+arel (2.0.9)
+builder (2.1.2)
+bundler (1.0.12, 1.0.0.rc.5)
+columnize (0.3.2)
+configuration (1.2.0)
+crack (0.1.8)
+cucumber (0.10.2)
+database_cleaner (0.6.6)
+diff-lcs (1.1.2)
+erubis (2.6.6)
+factory_girl (1.3.3)
+factory_girl_rails (1.0)
+faker (0.3.1)
+gherkin (2.3.5)
+gravatar_image_tag (1.0.0)
+heroku (1.20.1)
+i18n (0.5.0)
+jquery-rails (0.2.7)
+json (1.5.1)
+launchy (0.3.7)
+linecache19 (0.5.12)
+looksee (1.0.2)
+mail (2.2.15)
+mime-types (1.16)
+nokogiri (1.4.4)
+pickle (0.4.7)
+pickler (0.2.0)
+polyglot (0.3.1)
+rack (1.2.2)
+rack-mount (0.6.14)
+rack-test (0.5.7)
+rails (3.0.6)
+railties (3.0.6)
+rake (0.8.7)
+rest-client (1.6.1)
+rspec (2.5.0)
+rspec-core (2.5.1)
+rspec-expectations (2.5.0)
+rspec-mocks (2.5.0)
+rspec-rails (2.5.0)
+ruby-debug-base19 (0.11.25)
+ruby-debug19 (0.11.6)
+ruby_core_source (0.1.5)
+shoulda (2.11.3)
+sqlite3-ruby (1.3.2)
+term-ansicolor (1.0.5)
+thor (0.14.6)
+treetop (1.4.9)
+tzinfo (0.3.26)
+web-app-theme (0.6.3)
+webrat (0.7.1)
+will_paginate (3.0.pre2)
+wirble (0.1.3)
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ rails c
+Loading development environment (Rails 3.0.6)
+ruby-1.9.2-p180 :001 > 
+ruby-1.9.2-p180 :002 >   
+ruby-1.9.2-p180 :003 >   17+ 4
+ => [0;36m21[0;0m 
+ruby-1.9.2-p180 :004 > ''
+ => [0;31m"[0;0m[0;36m[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :005 > "foo"
+ => [0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :006 > "br[Kar"
+ => [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :007 > "foo" + "bar"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :008 > first_name = "Michael"
+ => [0;31m"[0;0m[0;36mMichael[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :009 > "#P[K{first_name} Hartl"
+ => [0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :010 > last_name = "Hartl"
+ => [0;31m"[0;0m[0;36mHartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :011 > first_name + " " "[K+ last-[K_name
+ => [0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :012 > "#{first_name}  #{last_name}"
+ => [0;31m"[0;0m[0;36mMichael  Hartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :013 > puts "foo"
+foo
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :014 > print "foo"
+foo => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :015 > print "foo\n"
+foo
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :016 > 'foo'
+ => [0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :017 > 'foo' + 'bar'
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :018 > '#foo[K[K[K{foo} bar'
+ => [0;31m"[0;0m[0;36m\#{foo} bar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :019 > '\n'
+ => [0;31m"[0;0m[0;36m\\n[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :020 > "\\n'[K"
+ => [0;31m"[0;0m[0;36m\\n[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :021 > 'Newlines (\n"[K_[K) and tabs (\t) both use the backslash character \.'
+ => [0;31m"[0;0m[0;36mNewlines (\\n) and tabs (\\t) both use the backslash character \\.[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :022 > 'Newlines (\n) and tabs (\t) both use the backslash character \.'[K"\\."\[4h\[4lt\[4h\[4ln'[PN[4h"[4lN
+ => [0;31m"[0;0m[0;36mNewlines (\\n) and tabs (\\t) both use the backslash character \\.[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :023 > 
+ruby-1.9.2-p180 :024 >   foobar[K[K[K[K[K[K"foobar".leg[Kngth
+ => [0;36m6[0;0m 
+ruby-1.9.2-p180 :025 > "foobar".empty?
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :026 > ''.empty?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :027 > 
+ruby-1.9.2-p180 :028 >   
+ruby-1.9.2-p180 :029 >   s = "foobar"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :030 > if s.empty?
+ruby-1.9.2-p180 :031?>   "the string is empty"
+ruby-1.9.2-p180 :032?>   else
+ruby-1.9.2-p180 :033 >[5C"the string is nonempty"
+ruby-1.9.2-p180 :034?>   end
+ => [0;31m"[0;0m[0;36mthe string is nonempty[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :035 > x  = "foo"
+ => [0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :036 > y = ""
+ => [0;31m"[0;0m[0;36m[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :037 > puts "Both strings are empty " if x.empty? && y.empty?
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :038 > puts "Both strings are empty" if x.empty? && y.empty?[P [P [4h|[4l [4h|[4l Both[P [P [P [P [4hO[4l [4hn[4l [4he[4l  strings are[P [P [P [Pe[P  [4h [4le[4hi[4l [4hs[4l 
+One string is empty
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :039 > puts "x is not empty " if !x.empty?
+x is not empty
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :040 > il[K[Knil.to_s
+ => [0;31m"[0;0m[0;36m[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :041 > ni.[Kl.empty?
+NoMethodError: You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?
+	from (irb):41
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :042 > n[K
+ruby-1.9.2-p180 :043 >   
+ruby-1.9.2-p180 :044 >   nit[Kl.to_s.em[K[Kempty?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :045 > f[K"foo".nil?
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :046 > "".nil?
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :047 > nil.nil?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :048 > 
+ruby-1.9.2-p180 :049 >   
+ruby-1.9.2-p180 :050 >   
+ruby-1.9.2-p180 :051 >   
+ruby-1.9.2-p180 :052 >   title
+NameError: undefined local variable or method `title' for main:Object
+	from (irb):52
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :053 > 
+ruby-1.9.2-p180 :054 >   
+ruby-1.9.2-p180 :055 >   @title
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :056 > puts "there is no such instance variable if[K[K" if @title.nil?
+there is no such instance variable
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :057 > 
+ruby-1.9.2-p180 :058 >   stirn [K[K[Kring = "foobar"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :059 > puts "the stirng[K[K[K[Kring #[K '#{string}' is nonempty" unels[K[K[Ke[Kless string.empty
+NoMethodError: undefined method `empty' for "foobar":String
+	from (irb):59
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :060 > puts "the string '#{string}' is nonempty" unless string.empty?
+the string 'foobar' is nonempty
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :061 > if nil
+ruby-1.9.2-p180 :062?>   ture
+ruby-1.9.2-p180 :063?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :064 > if nil
+ruby-1.9.2-p180 :065?>   true
+ruby-1.9.2-p180 :066?>   else
+ruby-1.9.2-p180 :067 >[5Cfalse
+ruby-1.9.2-p180 :068?>   end
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :069 > if 0
+ruby-1.9.2-p180 :070?>   true
+ruby-1.9.2-p180 :071?>   else
+ruby-1.9.2-p180 :072 >[5Cfalse
+ruby-1.9.2-p180 :073?>   end
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :074 > def string_message(string)
+ruby-1.9.2-p180 :075?>   if string.empty?
+ruby-1.9.2-p180 :076?>[5C"it is an empty string"
+ruby-1.9.2-p180 :077?>[5Celse
+ruby-1.9.2-p180 :078 >[7C"the string is nonempty"
+ruby-1.9.2-p180 :079?>[5Cend
+ruby-1.9.2-p180 :080?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :081 > puts string_message("")
+it is an empty string
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :082 > puts string_message("")[K[Khello")
+the string is nonempty
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :083 > def string_message(string)
+ruby-1.9.2-p180 :084?>   return "it is an empty stering[K[K[K[K[Kring!" if string.empty?
+ruby-1.9.2-p180 :085?>   return "the stir[K[Kring is nonempty" if [K[K
+ruby-1.9.2-p180 :086?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :087 > endreturn "the string is nonempty"[23Dit is an empty string!" if string.empty?[48Ddef string_message(string)[K[26Dputs string_message("hello")[7D")[K
+it is an empty string!
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :088 > puts string_message("")[23Dend[Kreturn "the string is nonempty"[23Dit is an empty string!" if string.empty?[48Ddef string_message(string)[K[26Dputs string_message("hello")
+the string is nonempty
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :089 > "foo bar    zb[Ka[K[Kbas".split
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbas[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :090 > "forxbarxsplitx".split('x')
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mfor[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36msplit[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :091 > a = [42, 8, 17]
+ => [0;32m[[0;0m[0;36m42[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :092 > a[0=[K]
+ => [0;36m42[0;0m 
+ruby-1.9.2-p180 :093 > ap[Kp[K[2[K1]
+ => [0;36m8[0;0m 
+ruby-1.9.2-p180 :094 > ap[K[2]
+ => [0;36m17[0;0m 
+ruby-1.9.2-p180 :095 > a[-1]
+ => [0;36m17[0;0m 
+ruby-1.9.2-p180 :096 > a
+ => [0;32m[[0;0m[0;36m42[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :097 > a.first
+ => [0;36m42[0;0m 
+ruby-1.9.2-p180 :098 > a.second
+ => [0;36m8[0;0m 
+ruby-1.9.2-p180 :099 > a.last
+ => [0;36m17[0;0m 
+ruby-1.9.2-p180 :100 > a.last == a[-1]
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :101 > x = a.lengthn[K
+ => [0;36m3[0;0m 
+ruby-1.9.2-p180 :102 > x == 3
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :103 > x == 1
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :104 > x != 1
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :105 > x >= 1
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :106 > x < 1
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :107 > a.sort
+ => [0;32m[[0;0m[0;36m8[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;34m,[0;0m [0;36m42[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :108 > a.reverse
+ => [0;32m[[0;0m[0;36m17[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m42[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :109 > a.shuffle
+ => [0;32m[[0;0m[0;36m42[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :110 > a.shuffle
+ => [0;32m[[0;0m[0;36m17[0;0m[0;34m,[0;0m [0;36m42[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :111 > a.shuffle
+ => [0;32m[[0;0m[0;36m17[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m42[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :112 > a << 7
+ => [0;32m[[0;0m[0;36m42[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;34m,[0;0m [0;36m7[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :113 > a << "foo'[K" << "ba[K[K[K'bar'
+ => [0;32m[[0;0m[0;36m42[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m17[0;0m[0;34m,[0;0m [0;36m7[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :114 > a.join
+ => [0;31m"[0;0m[0;36m428177foobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :115 > a.join9[K(' '[K, ')
+ => [0;31m"[0;0m[0;36m42, 8, 17, 7, foo, bar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :116 > 
+ruby-1.9.2-p180 :117 >   
+ruby-1.9.2-p180 :118 >   
+ruby-1.9.2-p180 :119 >   
+ruby-1.9.2-p180 :120 >   0..9
+ => [0;36m0[0;0m[0;31m..[0;0m[0;36m9[0;0m 
+ruby-1.9.2-p180 :121 > 0..9.to_a
+NoMethodError: undefined method `to_a' for 9:Fixnum
+	from (irb):121
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :122 > 0..9.to_a[K[K[K[K[K[K[K[K[K
+ruby-1.9.2-p180 :123 >   
+ruby-1.9.2-p180 :124 >   
+ruby-1.9.2-p180 :125 >   0..9.to_a[4h)[4l.[4h([4l0
+ => [0;32m[[0;0m[0;36m0[0;0m[0;34m,[0;0m [0;36m1[0;0m[0;34m,[0;0m [0;36m2[0;0m[0;34m,[0;0m [0;36m3[0;0m[0;34m,[0;0m [0;36m4[0;0m[0;34m,[0;0m [0;36m5[0;0m[0;34m,[0;0m [0;36m6[0;0m[0;34m,[0;0m [0;36m7[0;0m[0;34m,[0;0m [0;36m8[0;0m[0;34m,[0;0m [0;36m9[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :126 > 
+ruby-1.9.2-p180 :127 >   
+ruby-1.9.2-p180 :128 >   a = %w[ f[Kfoo bar bas[Kz quux]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbaz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mquux[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :129 > a[0..2]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mfoo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbar[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mbaz[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :130 > 
+ruby-1.9.2-p180 :131 >   
+ruby-1.9.2-p180 :132 >   
+ruby-1.9.2-p180 :133 >   a[K('a'..'e').to_a
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :134 > 
+ruby-1.9.2-p180 :135 >   
+ruby-1.9.2-p180 :136 >   
+ruby-1.9.2-p180 :137 >   1[K(1..5).each { \[K|i| 2 * i }[D}[D[K[K[4hp[4l2[4hu[4l2[4ht[4l2[4hs[4l2[4h [4l2
+2
+4
+6
+8
+10
+ => [0;36m1[0;0m[0;31m..[0;0m[0;36m5[0;0m 
+ruby-1.9.2-p180 :138 > (1..5).each { |i| puts 2 * i }.each[K[K[K[K[K)([4h([4l1(1..5).each { |i| puts 2 * i }).each |i\[K| {[K[K[K[K{|i| puts 10*i}
+2
+4
+6
+8
+10
+10
+20
+30
+40
+50
+ => [0;36m1[0;0m[0;31m..[0;0m[0;36m5[0;0m 
+ruby-1.9.2-p180 :139 > 
+ruby-1.9.2-p180 :140 >   
+ruby-1.9.2-p180 :141 >   
+ruby-1.9.2-p180 :142 >   (1..5).each do |i|
+ruby-1.9.2-p180 :143 >[5Cputs 2*i
+ruby-1.9.2-p180 :144?>   end
+2
+4
+6
+8
+10
+ => [0;36m1[0;0m[0;31m..[0;0m[0;36m5[0;0m 
+ruby-1.9.2-p180 :145 > endputs 2*i[8D(1..5).each do |i|
+ruby-1.9.2-p180 :146 >[5C(1..5).each do |i|[18Dend[Kputs 2*i
+ruby-1.9.2-p180 :147?>   puts '----'
+ruby-1.9.2-p180 :148?>   end
+2
+----
+4
+----
+6
+----
+8
+----
+10
+----
+ => [0;36m1[0;0m[0;31m..[0;0m[0;36m5[0;0m 
+ruby-1.9.2-p180 :149 > 3.times { puts "hello" }
+hello
+hello
+hello
+ => [0;36m3[0;0m 
+ruby-1.9.2-p180 :150 > 1[K(1.[K..5).map { |i| i**2 }
+ => [0;32m[[0;0m[0;36m1[0;0m[0;34m,[0;0m [0;36m4[0;0m[0;34m,[0;0m [0;36m9[0;0m[0;34m,[0;0m [0;36m16[0;0m[0;34m,[0;0m [0;36m25[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :151 > %w[a b c]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :152 > %w[a b c].map{[K { |char| char.upcase }
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mA[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mB[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mC[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :153 > ('a'..'x[Kz').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mbahrgktq[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :154 > ('a'..'z').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mhovqjrwf[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :155 > ('a'..'z').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mumriahjo[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :156 > ('a'..'z').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mhjwansgr[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :157 > ('a'..'z').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mlbaxgdqo[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :158 > ('a'..'z').to_a.shuffle[0..7].join
+ => [0;31m"[0;0m[0;36mbhnzfait[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :159 > ('a'..'z').to_a.shuffle[0..7].join[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+ => [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;31m..[0;0m[0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :160 > ('a'..'z').to_a
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mf[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mi[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mj[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mp[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mv[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :161 > ('a'..'z').to_a.shuffle
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mp[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mv[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mj[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mf[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mi[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :162 > ('a'..'z').to_a.shuffle
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mj[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mp[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mv[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mi[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mf[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :163 > ('a'..'z').to_a.shuffle
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mp[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mj[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mv[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mf[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mi[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :164 > ('a'..'z').to_a.shuffle
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mv[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mf[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mj[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mb[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mi[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mp[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :165 > ('a'..'z').to_a.shuffle[0..7]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mq[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mo[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ml[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ms[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mk[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :166 > ('a'..'z').to_a.shuffle[0..7]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36md[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mh[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36my[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mu[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mc[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :167 > ('a'..'z').to_a.shuffle[0..7]
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mr[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mg[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mw[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mz[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mt[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mx[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :168 > 
+ruby-1.9.2-p180 :169 >   
+ruby-1.9.2-p180 :170 >   
+ruby-1.9.2-p180 :171 >   
+ruby-1.9.2-p180 :172 >   
+ruby-1.9.2-p180 :173 >   user ][K= {}
+ => [0;32m{[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :174 > s[Kuser[:fir[K[K[K[K"first-[K_name"] = M[K"Michael"
+ => [0;31m"[0;0m[0;36mMichael[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :175 > user[:last[K[K[K[K[K"last_nem[K[Kame"] = "Hartl"
+ => [0;31m"[0;0m[0;36mHartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :176 > user[:fi[K[K[K'[K"[K'first_name']
+ => [0;31m"[0;0m[0;36mMichael[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :177 > user
+ => [0;32m{[0;0m[0;31m"[0;0m[0;36mfirst_name[0;0m[0;31m"[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mlast_name[0;0m[0;31m"[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mHartl[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :178 > 
+ruby-1.9.2-p180 :179 >   
+ruby-1.9.2-p180 :180 >   
+ruby-1.9.2-p180 :181 >   
+ruby-1.9.2-p180 :182 >   
+ruby-1.9.2-p180 :183 >   "name".split
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mname[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :184 > "name".split('')
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mn[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36ma[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36mm[0;0m[0;31m"[0;0m[0;34m,[0;0m [0;31m"[0;0m[0;36me[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :185 > 
+ruby-1.9.2-p180 :186 >   
+ruby-1.9.2-p180 :187 >   "foobar"r[K.reverse
+ => [0;31m"[0;0m[0;36mraboof[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :188 > :foobar
+ => [1;33m:[0;0m[1;33mfoobar[0;0m 
+ruby-1.9.2-p180 :189 > :foobar.split'[K('')
+NoMethodError: undefined method `split' for :foobar:Symbol
+	from (irb):189
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :190 > 
+ruby-1.9.2-p180 :191 >   
+ruby-1.9.2-p180 :192 >   
+ruby-1.9.2-p180 :193 >   :foobar
+ => [1;33m:[0;0m[1;33mfoobar[0;0m 
+ruby-1.9.2-p180 :194 > :foobar.reverse
+NoMethodError: undefined method `reverse' for :foobar:Symbol
+	from (irb):194
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :195 > 
+ruby-1.9.2-p180 :196 >   
+ruby-1.9.2-p180 :197 >   
+ruby-1.9.2-p180 :198 >   user = {:name => "Micah[K[Khael"[K Hartl", ema[K[K[K:email => "michael@example.com" }
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :199 > user[K[K[K[K
+ruby-1.9.2-p180 :200 >   
+ruby-1.9.2-p180 :201 >   
+ruby-1.9.2-p180 :202 >   user[:name]
+ => [0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :203 > user:[Kp[K[:email]
+ => [0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :204 > user
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :205 > 
+ruby-1.9.2-p180 :206 >   
+ruby-1.9.2-p180 :207 >   user[:password]
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :208 > 
+ruby-1.9.2-p180 :209 >   
+ruby-1.9.2-p180 :210 >   user.merge! {:password = > "hello"}
+SyntaxError: (irb):210: syntax error, unexpected tASSOC, expecting '}'
+user.merge! {:password => "hello"}
+                         ^
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :211 > user.merge! {:password => "hello"})[4h([4l 
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :212 > 
+ruby-1.9.2-p180 :213 >   
+ruby-1.9.2-p180 :214 >   
+ruby-1.9.2-p180 :215 >   user
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :216 > 
+ruby-1.9.2-p180 :217 >   
+ruby-1.9.2-p180 :218 >   
+ruby-1.9.2-p180 :219 >   
+ruby-1.9.2-p180 :220 >   
+ruby-1.9.2-p180 :221 >   params = {][K}
+ => [0;32m{[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :222 > params[:user] = user
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :223 > params
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33muser[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :224 > params[:user]
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :225 > params[:user]{[K[:name]
+ => [0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :226 > params[:user][:name][K[K[K[K[Kemail]
+ => [0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :227 > 
+ruby-1.9.2-p180 :228 >   
+ruby-1.9.2-p180 :229 >   flash = {:success => "it worked", "[K:error => "it failed"}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33msuccess[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mit worked[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33merror[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mit failed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :230 > 
+ruby-1.9.2-p180 :231 >   
+ruby-1.9.2-p180 :232 >   
+ruby-1.9.2-p180 :233 >   flash.each do |key, value|
+ruby-1.9.2-p180 :234 >[5Cputs "Key #{key.inspect} has value #{value.inspect}"
+ruby-1.9.2-p180 :235?>   end
+Key :success has value "it worked"
+Key :error has value "it failed"
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33msuccess[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mit worked[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33merror[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mit failed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :236 > 
+ruby-1.9.2-p180 :237 >   
+ruby-1.9.2-p180 :238 >   
+ruby-1.9.2-p180 :239 >   
+ruby-1.9.2-p180 :240 >   pus[Kts (1..5).to_a
+1
+2
+3
+4
+5
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :241 > puts (1..5).to_a.inspect
+[1, 2, 3, 4, 5]
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :242 > 
+ruby-1.9.2-p180 :243 >   
+ruby-1.9.2-p180 :244 >   
+ruby-1.9.2-p180 :245 >   puts :name, :name.kns[K[K[Kinspect
+name
+:name
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :246 > 
+ruby-1.9.2-p180 :247 >   
+ruby-1.9.2-p180 :248 >   puts "It ow[Kw[K[Kworked", "It worked!".inspect
+It worked
+"It worked!"
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :249 > params.inspect
+ => [0;31m"[0;0m[0;36m{:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}}[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :250 > p inspect
+"main"
+ => [0;31m"[0;0m[0;36mmain[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :251 > p params
+{:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33muser[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :252 > params
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33muser[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :253 > 
+ruby-1.9.2-p180 :254 >   
+ruby-1.9.2-p180 :255 >   
+ruby-1.9.2-p180 :256 >   pu[K user
+{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :257 > user
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mname[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mMichael Hartl[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33memail[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mmichael@example.com[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mpassword[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhello[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :258 > 
+ruby-1.9.2-p180 :259 >   
+ruby-1.9.2-p180 :260 >   
+ruby-1.9.2-p180 :261 >   
+ruby-1.9.2-p180 :262 >   
+ruby-1.9.2-p180 :263 >   
+ruby-1.9.2-p180 :264 >   
+ruby-1.9.2-p180 :265 >   
+ruby-1.9.2-p180 :266 >   
+ruby-1.9.2-p180 :267 >   
+ruby-1.9.2-p180 :268 >   
+ruby-1.9.2-p180 :269 >   
+ruby-1.9.2-p180 :270 >   
+ruby-1.9.2-p180 :271 >   
+ruby-1.9.2-p180 :272 >   
+ruby-1.9.2-p180 :273 >   s = "foobar"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :274 > s.class
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :275 > 
+ruby-1.9.2-p180 :276 >   
+ruby-1.9.2-p180 :277 >   
+ruby-1.9.2-p180 :278 >   s = String.new "foobar'[K"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :279 > s.class
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :280 > s == "foobar"
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :281 > a = Array.new( [1,2,3'[K[[K])
+ => [0;32m[[0;0m[0;36m1[0;0m[0;34m,[0;0m [0;36m2[0;0m[0;34m,[0;0m [0;36m3[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :282 > h = Hash.new
+ => [0;32m{[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :283 > hp[K[:foo}[K]
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :284 > h[:foo][6D = Hash.new(0)
+ => [0;32m{[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :285 > h[:foo]
+ => [0;36m0[0;0m 
+ruby-1.9.2-p180 :286 > 
+ruby-1.9.2-p180 :287 >   
+ruby-1.9.2-p180 :288 >   
+ruby-1.9.2-p180 :289 >   
+ruby-1.9.2-p180 :290 >   s = String.new("foobaar")
+ => [0;31m"[0;0m[0;36mfoobaar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :291 > s.class
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :292 > s.class.super
+s.class.superclass                      s.class.superclass_delegating_accessor  s.class.superset?                       
+[Kruby-1.9.2-p180 :292 > s.class.super
+s.class.superclass                      s.class.superclass_delegating_accessor  s.class.superset?                       
+[Kruby-1.9.2-p180 :292 > s.class.superclass
+ => [1;32mObject[0;0m 
+ruby-1.9.2-p180 :293 > s.class.superclass[11D[K.superclass.super
+s.class.superclass.superclass                      s.class.superclass.superclass_delegating_accessor  s.class.superclass.superset?                       
+[Kruby-1.9.2-p180 :293 > s.class.superclass.super
+s.class.superclass.superclass                      s.class.superclass.superclass_delegating_accessor  s.class.superclass.superset?                       
+[Kruby-1.9.2-p180 :293 > s.class.superclass.superclass
+ => [1;32mBasicObject[0;0m 
+ruby-1.9.2-p180 :294 > s.class.superclass.superclass[11D[K.superclass.sp[Kuperclass
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :295 > 
+ruby-1.9.2-p180 :296 >   
+ruby-1.9.2-p180 :297 >   
+ruby-1.9.2-p180 :298 >   
+ruby-1.9.2-p180 :299 >   
+ruby-1.9.2-p180 :300 >   
+ruby-1.9.2-p180 :301 >   
+ruby-1.9.2-p180 :302 >   
+ruby-1.9.2-p180 :303 >   
+ruby-1.9.2-p180 :304 >   class Word
+ruby-1.9.2-p180 :305?>   def palindrome?(string)
+ruby-1.9.2-p180 :306?>[5Cstring = = string.eve[K[K[Kreverse
+ruby-1.9.2-p180 :307?>[5Cend
+ruby-1.9.2-p180 :308?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :309 > w = Word.new
+ => #<Word:0x000001040824b0> 
+ruby-1.9.2-p180 :310 > w.palindrome?("foobar")
+ => [0;32mfalse[0;0m 
+ruby-1.9.2-p180 :311 > w.palindrome?("foobar")[K[K[K[K[K[K[K[Klevel")
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :312 > 
+ruby-1.9.2-p180 :313 >   
+ruby-1.9.2-p180 :314 >   
+ruby-1.9.2-p180 :315 >   
+ruby-1.9.2-p180 :316 >   class Word < String
+ruby-1.9.2-p180 :317?>   class Word < String[19Dw.palindrome?("level")[7Dfoobar")[22D = Word.new[K[12Dend[Kstring == string.reverse[24Ddef palindrome?(string)[K[K[K[K[K[K[K[K[K
+ruby-1.9.2-p180 :318?>[5Cself == self.reverse
+ruby-1.9.2-p180 :319?>[5Cend
+ruby-1.9.2-p180 :320?>   end
+TypeError: superclass mismatch for class Word
+	from (irb):316
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :321 > Word
+ => [1;32mWord[0;0m 
+ruby-1.9.2-p180 :322 > Word.class
+ => [1;32mClass[0;0m 
+ruby-1.9.2-p180 :323 > Word.class.supercalss
+NoMethodError: undefined method `supercalss' for Class:Class
+	from (irb):323
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :324 > Word.class.supercalss[K[K[K[Klass
+ => [1;32mModule[0;0m 
+ruby-1.9.2-p180 :325 > class HanisWord < String
+ruby-1.9.2-p180 :326?>   def palindrome?
+ruby-1.9.2-p180 :327?>[5Cself == self.reverse
+ruby-1.9.2-p180 :328?>[5Cend
+ruby-1.9.2-p180 :329?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :330 > s = HanisWord.new("level")
+ => [0;31m"[0;0m[0;36mlevel[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :331 > s.pa[K[K[K[Ks
+ => [0;31m"[0;0m[0;36mlevel[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :332 > s.palindrome?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :333 > s.length
+ => [0;36m5[0;0m 
+ruby-1.9.2-p180 :334 > s.class
+ => [1;32mHanisWord[0;0m 
+ruby-1.9.2-p180 :335 > s.class.superclass
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :336 > s.class.superclass.u[Ksper[K[K[Kuperclass
+ => [1;32mObject[0;0m 
+ruby-1.9.2-p180 :337 > 
+ruby-1.9.2-p180 :338 >   
+ruby-1.9.2-p180 :339 >   
+ruby-1.9.2-p180 :340 >   
+ruby-1.9.2-p180 :341 >   
+ruby-1.9.2-p180 :342 >   "level".pli[K[Kalindrome?
+NoMethodError: undefined method `palindrome?' for "level":String
+	from (irb):342
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :343 > 
+ruby-1.9.2-p180 :344 >   
+ruby-1.9.2-p180 :345 >   
+ruby-1.9.2-p180 :346 >   
+ruby-1.9.2-p180 :347 >   
+ruby-1.9.2-p180 :348 >   
+ruby-1.9.2-p180 :349 >   cals[K[K[Klass String
+ruby-1.9.2-p180 :350?>   def palindrome?
+ruby-1.9.2-p180 :351?>[5Cself == self.reverse
+ruby-1.9.2-p180 :352?>[5Cend
+ruby-1.9.2-p180 :353?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :354 > "[K"level"pal[K[K[K.palindrome?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :355 > 
+ruby-1.9.2-p180 :356 >   
+ruby-1.9.2-p180 :357 >   deified[K[K[K[K[K[K[K"deified"
+ => [0;31m"[0;0m[0;36mdeified[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :358 > "deified".class
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :359 > "deified".class[6D[K.palindrome?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :360 > 
+ruby-1.9.2-p180 :361 >   
+ruby-1.9.2-p180 :362 >   
+ruby-1.9.2-p180 :363 >   ""
+ => [0;31m"[0;0m[0;36m[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :364 > "".blank?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :365 > "        ".blank?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :366 > nil.bla[K[K[Kblank?
+ => [0;32mtrue[0;0m 
+ruby-1.9.2-p180 :367 > 
+ruby-1.9.2-p180 :368 >   
+ruby-1.9.2-p180 :369 >   
+ruby-1.9.2-p180 :370 >   
+ruby-1.9.2-p180 :371 >   controller = Pages.[KController.new
+ => [1;31m#<[0;0m[1;37mPagesController[0;0m[0;34m:[0;0m0x00000102e9ad38 [0;34m@[0;0maction_has_layout=true, @view_context_class=nil, @_headers={"Content-Type"=[1;31m>[0;0m[0;31m"[0;0m[0;36mtext/html[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;34m,[0;0m [0;32mstatus[0;0m[0;36m200[0;0m 
+ruby-1.9.2-p180 :372 > 
+ruby-1.9.2-p180 :373 >   
+ruby-1.9.2-p180 :374 >   
+ruby-1.9.2-p180 :375 >   controller.class
+ => [1;32mPagesController[0;0m 
+ruby-1.9.2-p180 :376 > 
+ruby-1.9.2-p180 :377 >   
+ruby-1.9.2-p180 :378 >   
+ruby-1.9.2-p180 :379 >   controller.class.superclass
+ => [1;32mApplicationController[0;0m 
+ruby-1.9.2-p180 :380 > 
+ruby-1.9.2-p180 :381 >   
+ruby-1.9.2-p180 :382 >   
+ruby-1.9.2-p180 :383 >   
+ruby-1.9.2-p180 :384 >   controller.class.superclass.sp[Kuperclass
+ => [1;32mActionController[0;0m[1;33m:[0;0m[1;33m[0;0m[1;33m:[0;0m[1;33m[0;0m[1;32mBase[0;0m 
+ruby-1.9.2-p180 :385 > 
+ruby-1.9.2-p180 :386 >   
+ruby-1.9.2-p180 :387 >   
+ruby-1.9.2-p180 :388 >   controller.class.superclass.superclass.superclass
+ => [1;32mActionController[0;0m[1;33m:[0;0m[1;33m[0;0m[1;33m:[0;0m[1;33m[0;0m[1;32mMetal[0;0m 
+ruby-1.9.2-p180 :389 > 
+ruby-1.9.2-p180 :390 >   
+ruby-1.9.2-p180 :391 >   
+ruby-1.9.2-p180 :392 >   controller.class.superclass.superclass.superclass.superclass
+ => [1;32mAbstractController[0;0m[1;33m:[0;0m[1;33m[0;0m[1;33m:[0;0m[1;33m[0;0m[1;32mBase[0;0m 
+ruby-1.9.2-p180 :393 > 
+ruby-1.9.2-p180 :394 >   
+ruby-1.9.2-p180 :395 >   
+ruby-1.9.2-p180 :396 >   controller.class.superclass.superclass.superclass.superclass.superclass
+ => [1;32mObject[0;0m 
+ruby-1.9.2-p180 :397 > 
+ruby-1.9.2-p180 :398 >   
+ruby-1.9.2-p180 :399 >   
+ruby-1.9.2-p180 :400 >   conl[Ktroller.home
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:21:in `signed_in?'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/controllers/pages_controller.rb:6:in `home'
+	from (irb):400
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :401 > 
+ruby-1.9.2-p180 :402 >   
+ruby-1.9.2-p180 :403 >   
+ruby-1.9.2-p180 :404 >   controller.action_methods
+ => #<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}> 
+ruby-1.9.2-p180 :405 > controller.action_methods.inspect
+ => [0;31m"[0;0m[0;36m#<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}>[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :406 > 
+ruby-1.9.2-p180 :407 >   
+ruby-1.9.2-p180 :408 >   
+ruby-1.9.2-p180 :409 >   controller.action_methods.inspect[8D[K[14Dhome[K[K[K[K[K[K.about
+ => [0;31m"[0;0m[0;36mAbout[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :410 > controller.about[K[K[K[K[Khelp
+ => [0;31m"[0;0m[0;36mHelp[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :411 > controller.help[K[K[K[Kcurrent_user
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from (irb):411
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :412 > 
+ruby-1.9.2-p180 :413 >   
+ruby-1.9.2-p180 :414 >   
+ruby-1.9.2-p180 :415 >   controller.home
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:21:in `signed_in?'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/controllers/pages_controller.rb:6:in `home'
+	from (irb):415
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :416 > 
+ruby-1.9.2-p180 :417 >   
+ruby-1.9.2-p180 :418 >   controller.homecurrent_user[12Dhelp[Kaboutction_methods.inspect
+ => [0;31m"[0;0m[0;36m#<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}>[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :419 > controller.action_methods.inspect[22Dhome[K[K[K[K[Kcontact
+ => [0;31m"[0;0m[0;36mContact[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :420 > controller.contact[K[K[K[K[K[K[Ksign_in
+ArgumentError: wrong number of arguments (0 for 1)
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:3:in `sign_in'
+	from (irb):420
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :421 > 
+ruby-1.9.2-p180 :422 >   
+ruby-1.9.2-p180 :423 >   
+ruby-1.9.2-p180 :424 >   require './example_user'
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :425 > require './example_user'[K.rb'
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :426 > example = User.new
+NoMethodError: undefined method `has_key?' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1506:in `has_attribute?'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1666:in `block in inspect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1665:in `collect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1665:in `inspect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/wirble-0.1.3/lib/wirble.rb:432:in `output_value'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/looksee-1.0.2/lib/looksee/wirble_compatibility.rb:46:in `output_value_with_looksee'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :427 > 
+ruby-1.9.2-p180 :428 >   
+ruby-1.9.2-p180 :429 >   
+ruby-1.9.2-p180 :430 >   example = User.new[18D[4hrequire './[4l[7C_user.rb'[K
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :431 > example = UserHani.new
+NameError: uninitialized constant UserHani
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/rspec-core-2.5.1/lib/rspec/core/backward_compatibility.rb:20:in `const_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/rspec-expectations-2.5.0/lib/rspec/expectations/backward_compatibility.rb:6:in `const_missing'
+	from (irb):431
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :432 > 
+ruby-1.9.2-p180 :433 >   
+ruby-1.9.2-p180 :434 >   
+ruby-1.9.2-p180 :435 >   exit
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ rails c
+Loading development environment (Rails 3.0.6)
+ruby-1.9.2-p180 :001 > example = UserHani.new[8D.new[K[18D[4hrequire './[4l[7C_user.rb'[K
+ => [0;32m[[0;0m[0;31m"[0;0m[0;36mUserHani[0;0m[0;31m"[0;0m[0;32m][0;0m 
+ruby-1.9.2-p180 :002 > exampe[Kle = UserHani.new
+ => [1;31m#<[0;0m[1;37mUserHani[0;0m[0;34m:[0;0m0x0000010166b6e0 [0;34m@[0;0mname=nil, @email=nil[1;31m>[0;0m 
+ruby-1.9.2-p180 :003 > example .name
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :004 > example.email
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :005 > example .name "Hani Elabed"
+ArgumentError: wrong number of arguments (1 for 0)
+	from (irb):5
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :006 > example.name "Hani Elabed"e[4h=[4l 
+ => [0;31m"[0;0m[0;36mHani Elabed[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :007 > example.email = "hani.[K2[K@main[K[Kni.com"
+ => [0;31m"[0;0m[0;36mhani@mani.com[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :008 > s[Kexample.name
+ => [0;31m"[0;0m[0;36mHani Elabed[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :009 > example.email
+ => [0;31m"[0;0m[0;36mhani@mani.com[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :010 > example.formatted_email
+ => [0;31m"[0;0m[0;36mHani Elabed <hani@mani.com>[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :011 > 
+ruby-1.9.2-p180 :012 >   
+ruby-1.9.2-p180 :013 >   
+ruby-1.9.2-p180 :014 >   user
+NameError: undefined local variable or method `user' for main:Object
+	from (irb):14
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :015 > example
+ => [1;31m#<[0;0m[1;37mUserHani[0;0m[0;34m:[0;0m0x0000010166b6e0 [0;34m@[0;0mname="Hani Elabed", @email="hani@mani.com"[1;31m>[0;0m 
+ruby-1.9.2-p180 :016 > 
+ruby-1.9.2-p180 :017 >   
+ruby-1.9.2-p180 :018 >   
+ruby-1.9.2-p180 :019 >   example
+ => [1;31m#<[0;0m[1;37mUserHani[0;0m[0;34m:[0;0m0x0000010166b6e0 [0;34m@[0;0mname="Hani Elabed", @email="hani@mani.com"[1;31m>[0;0m 
+ruby-1.9.2-p180 :020 > 
+ruby-1.9.2-p180 :021 >   
+ruby-1.9.2-p180 :022 >   
+ruby-1.9.2-p180 :023 >   
+ruby-1.9.2-p180 :024 >   
+ruby-1.9.2-p180 :025 >   
+ruby-1.9.2-p180 :026 >   
+ruby-1.9.2-p180 :027 >   
+ruby-1.9.2-p180 :028 >   
+ruby-1.9.2-p180 :029 >   
+ruby-1.9.2-p180 :030 >   
+ruby-1.9.2-p180 :031 >   def string_shuffle(s)
+ruby-1.9.2-p180 :032?>   s.split('').shuffle.join(', ')
+ruby-1.9.2-p180 :033?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :034 > string_shuffle("foobar")
+ => [0;31m"[0;0m[0;36mo, b, r, o, a, f[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :035 > string_shuffle("foobar")
+ => [0;31m"[0;0m[0;36mo, o, b, a, r, f[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :036 > string_shuffle("foobar")
+ => [0;31m"[0;0m[0;36mf, o, a, r, o, b[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :037 > string_shuffle("foobar")
+ => [0;31m"[0;0m[0;36mf, o, b, o, a, r[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :038 > 
+ruby-1.9.2-p180 :039 >   
+ruby-1.9.2-p180 :040 >   
+ruby-1.9.2-p180 :041 >   # Above is es[Kxercise 5[K4.5.1
+ruby-1.9.2-p180 :042 >   
+ruby-1.9.2-p180 :043 >   
+ruby-1.9.2-p180 :044 >   # Above is exercise 4.5.1[25Dstring_shuffle("foobar")[K[24Dend[Ks.split('').shuffle.join(', ')[30Ddef string_shuffle(s)[K[21Dexample[K[7Ddef string_shuffle(s)[21Ds.split('').shuffle.join(', ')[30Dend[Kstring_shuffle("foobar")[24D# Above is exercise 4.5.1[25D[Kclass String
+ruby-1.9.2-p180 :045?>   class String[12D# Above is exercise 4.5.1[25Dstring_shuffle("foobar")[K[24Dend[Ks.split('').shuffle.join(', ')[30Ddef string_shuffle(s)[K[K[K[K
+ruby-1.9.2-p180 :046?>[5Cdef string_shuffle[18Dclass String[K[12D# Above is exercise 4.5.1[25Dstring_shuffle("foobar")[K[24Dend[Ks.split('').shuffle.join(', ')s[4he[4l.[4hl[4l.[4hf[4l.
+ruby-1.9.2-p180 :047?>[5Cend
+ruby-1.9.2-p180 :048?>   end
+ => [0;32mnil[0;0m 
+ruby-1.9.2-p180 :049 > 
+ruby-1.9.2-p180 :050 >   
+ruby-1.9.2-p180 :051 >   
+ruby-1.9.2-p180 :052 >   foob[K[K[K[K"b[Kfooo[Kbar"
+ => [0;31m"[0;0m[0;36mfoobar[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :053 > "foobar".class
+ => [1;32mString[0;0m 
+ruby-1.9.2-p180 :054 > "foobar".class[6D[K.string_shuffle
+ => [0;31m"[0;0m[0;36mr, o, a, o, b, f[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :055 > "foobar".string_shuffle
+ => [0;31m"[0;0m[0;36ma, o, r, f, b, o[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :056 > "foobar".string_shuffle
+ => [0;31m"[0;0m[0;36mf, o, b, a, r, o[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :057 > "foobar".string_shuffle
+ => [0;31m"[0;0m[0;36mr, o, b, f, o, a[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :058 > 
+ruby-1.9.2-p180 :059 >   
+ruby-1.9.2-p180 :060 >   
+ruby-1.9.2-p180 :061 >   # Above is exercise 4.5.2
+ruby-1.9.2-p180 :062 >   
+ruby-1.9.2-p180 :063 >   
+ruby-1.9.2-p180 :064 >   
+ruby-1.9.2-p180 :065 >   persone[K1 = {:first => hani[K[K[K[K"hani", :last[K[K[K[K[K[K[K[K[K[K[Koussam"[Ka", :last => "elabed"}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36moussama[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :066 > 
+ruby-1.9.2-p180 :067 >   
+ruby-1.9.2-p180 :068 >   person2 = "[K{:first => "sihan[Km", :last => "elabed"}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36msiham[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :069 > 
+ruby-1.9.2-p180 :070 >   
+ruby-1.9.2-p180 :071 >   person3 = {:first =>h[K "hani", :last => "elabed"}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhani[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :072 > 
+ruby-1.9.2-p180 :073 >   
+ruby-1.9.2-p180 :074 >   pram[Ka[K[K[Karams = {:father => person1, :mother +[K=> person2 , :child =. [K> person3}
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfather[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36moussama[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mmother[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36msiham[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mchild[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhani[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :075 > 
+ruby-1.9.2-p180 :076 >   
+ruby-1.9.2-p180 :077 >   params
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfather[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36moussama[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mmother[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36msiham[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mchild[0;0m[0;34m=>[0;0m[0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36mhani[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :078 > 
+ruby-1.9.2-p180 :079 >   
+ruby-1.9.2-p180 :080 >   
+ruby-1.9.2-p180 :081 >   params{[K[:father]
+ => [0;32m{[0;0m[1;33m:[0;0m[1;33mfirst[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36moussama[0;0m[0;31m"[0;0m[0;34m,[0;0m [1;33m:[0;0m[1;33mlast[0;0m[0;34m=>[0;0m[0;31m"[0;0m[0;36melabed[0;0m[0;31m"[0;0m[0;32m}[0;0m 
+ruby-1.9.2-p180 :082 > 
+ruby-1.9.2-p180 :083 >   
+ruby-1.9.2-p180 :084 >   pram[K[K[Karams{:[K[K[:father][:first]
+ => [0;31m"[0;0m[0;36moussama[0;0m[0;31m"[0;0m 
+ruby-1.9.2-p180 :085 > 
+ruby-1.9.2-p180 :086 >   
+ruby-1.9.2-p180 :087 >   
+ruby-1.9.2-p180 :088 >   
+ruby-1.9.2-p180 :089 >   J#[K[K# above is exer[K[K[K[K[K[K[K[K[K[K[KAbove is exercise 4.5.3
+ruby-1.9.2-p180 :090 >   
+ruby-1.9.2-p180 :091 >   
+ruby-1.9.2-p180 :092 >   exit
+]0;helabed@hani-elabeds-MacBook-Pro.local: ~/Dropbox/Rails3Class/projects/sample_apphelabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ exit
+exit
+
+Script done on Sat Apr 23 14:44:00 2011

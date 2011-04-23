@@ -1,0 +1,1077 @@
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ script  hanis_ch_4_script_log_file.log
+Script started, output file is hanis_ch_4_script_log_file.log
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ ll
+total 2320
+-rw-r--r--   1 helabed  staff   1.2K Apr 13 16:18 Gemfile
+-rw-r--r--   1 helabed  staff   3.3K Apr 13 16:18 Gemfile.lock
+-rw-r--r--   1 helabed  staff   214B Feb  8 16:33 README.markdown
+-rw-r--r--   1 helabed  staff   269B Feb  8 16:26 Rakefile
+drwxr-xr-x   7 helabed  staff   238B Apr 21 22:03 app
+drwxr-xr-x  10 helabed  staff   340B Apr 18 15:02 config
+-rw-r--r--   1 helabed  staff   159B Feb  8 16:26 config.ru
+drwxr-xr-x   7 helabed  staff   238B Apr 23 12:56 db
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 doc
+-rw-r--r--   1 helabed  staff    43B Apr 23 13:28 hanis_ch_4_script_log_file.log
+drwxr-xr-x   3 helabed  staff   102B Apr 15 15:54 lib
+drwxr-xr-x   6 helabed  staff   204B Feb  8 16:26 log
+drwxr-xr-x  11 helabed  staff   374B Apr 15 15:52 public
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 script
+drwxr-xr-x   7 helabed  staff   238B Apr 21 22:41 spec
+drwxr-xr-x   7 helabed  staff   238B Apr 13 15:35 tmp
+drwxr-xr-x   3 helabed  staff   102B Feb  8 16:26 vendor
+-rw-r--r--   1 helabed  staff   1.1M Apr 23 12:46 webrat.log
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ gem list
+
+*** LOCAL GEMS ***
+
+abstract (1.0.0)
+actionmailer (3.0.6)
+actionpack (3.0.6)
+activemodel (3.0.6)
+activerecord (3.0.6)
+activeresource (3.0.6)
+activesupport (3.0.6)
+annotate-models (1.0.4)
+archive-tar-minitar (0.5.2)
+arel (2.0.9)
+builder (2.1.2)
+bundler (1.0.12, 1.0.0.rc.5)
+columnize (0.3.2)
+configuration (1.2.0)
+crack (0.1.8)
+cucumber (0.10.2)
+database_cleaner (0.6.6)
+diff-lcs (1.1.2)
+erubis (2.6.6)
+factory_girl (1.3.3)
+factory_girl_rails (1.0)
+faker (0.3.1)
+gherkin (2.3.5)
+gravatar_image_tag (1.0.0)
+heroku (1.20.1)
+i18n (0.5.0)
+jquery-rails (0.2.7)
+json (1.5.1)
+launchy (0.3.7)
+linecache19 (0.5.12)
+looksee (1.0.2)
+mail (2.2.15)
+mime-types (1.16)
+nokogiri (1.4.4)
+pickle (0.4.7)
+pickler (0.2.0)
+polyglot (0.3.1)
+rack (1.2.2)
+rack-mount (0.6.14)
+rack-test (0.5.7)
+rails (3.0.6)
+railties (3.0.6)
+rake (0.8.7)
+rest-client (1.6.1)
+rspec (2.5.0)
+rspec-core (2.5.1)
+rspec-expectations (2.5.0)
+rspec-mocks (2.5.0)
+rspec-rails (2.5.0)
+ruby-debug-base19 (0.11.25)
+ruby-debug19 (0.11.6)
+ruby_core_source (0.1.5)
+shoulda (2.11.3)
+sqlite3-ruby (1.3.2)
+term-ansicolor (1.0.5)
+thor (0.14.6)
+treetop (1.4.9)
+tzinfo (0.3.26)
+web-app-theme (0.6.3)
+webrat (0.7.1)
+will_paginate (3.0.pre2)
+wirble (0.1.3)
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ rails c
+Loading development environment (Rails 3.0.6)
+ruby-1.9.2-p180 :001 > 
+ruby-1.9.2-p180 :002 >   
+ruby-1.9.2-p180 :003 >   17+4
+ => 21 
+ruby-1.9.2-p180 :004 > ''
+ => "" 
+ruby-1.9.2-p180 :005 > "foo"
+ => "foo" 
+ruby-1.9.2-p180 :006 > "bar"
+ => "bar" 
+ruby-1.9.2-p180 :007 > "foo" + "bar"
+ => "foobar" 
+ruby-1.9.2-p180 :008 > first_name = "Michael"
+ => "Michael" 
+ruby-1.9.2-p180 :009 > "#{first_name} Hartl"
+ => "Michael Hartl" 
+ruby-1.9.2-p180 :010 > last_name = "Hartl"
+ => "Hartl" 
+ruby-1.9.2-p180 :011 > first_name + " " + last_name
+ => "Michael Hartl" 
+ruby-1.9.2-p180 :012 > "#{first_name}  #{last_name}"
+ => "Michael  Hartl" 
+ruby-1.9.2-p180 :013 > puts "foo"
+foo
+ => nil 
+ruby-1.9.2-p180 :014 > print "foo"
+foo => nil 
+ruby-1.9.2-p180 :015 > print "foo\n"
+foo
+ => nil 
+ruby-1.9.2-p180 :016 > 'foo'
+ => "foo" 
+ruby-1.9.2-p180 :017 > 'foo' + 'bar'
+ => "foobar" 
+ruby-1.9.2-p180 :018 > '#{foo} bar'
+ => "\#{foo} bar" 
+ruby-1.9.2-p180 :019 > '\n'
+ => "\\n" 
+ruby-1.9.2-p180 :020 > "\\n"
+ => "\\n" 
+ruby-1.9.2-p180 :021 > 'Newlines (\n) and tabs (\t) both use the backslash character \.'
+ => "Newlines (\\n) and tabs (\\t) both use the backslash character \\." 
+ruby-1.9.2-p180 :022 > "Newlines (\\n) and tabs (\\t) both use the backslash character \\."
+ => "Newlines (\\n) and tabs (\\t) both use the backslash character \\." 
+ruby-1.9.2-p180 :023 > 
+ruby-1.9.2-p180 :024 >   "foobar".length
+ => 6 
+ruby-1.9.2-p180 :025 > "foobar".empty?
+ => false 
+ruby-1.9.2-p180 :026 > ''.empty?
+ => true 
+ruby-1.9.2-p180 :027 > 
+ruby-1.9.2-p180 :028 >   
+ruby-1.9.2-p180 :029 >   s = "foobar"
+ => "foobar" 
+ruby-1.9.2-p180 :030 > if s.empty?
+ruby-1.9.2-p180 :031?>   "the string is empty"
+ruby-1.9.2-p180 :032?>   else
+ruby-1.9.2-p180 :033 >     "the string is nonempty"
+ruby-1.9.2-p180 :034?>   end
+ => "the string is nonempty" 
+ruby-1.9.2-p180 :035 > x = "foo"
+ => "foo" 
+ruby-1.9.2-p180 :036 > y = ""
+ => "" 
+ruby-1.9.2-p180 :037 > puts "Both strings are empty" if x.empty? && y.empty?
+ => nil 
+ruby-1.9.2-p180 :038 > puts "One string is empty" if x.empty? || y.empty?
+One string is empty
+ => nil 
+ruby-1.9.2-p180 :039 > puts "x is not empty" if !x.empty?
+x is not empty
+ => nil 
+ruby-1.9.2-p180 :040 > nil.to_s
+ => "" 
+ruby-1.9.2-p180 :041 > nil.empty?
+NoMethodError: You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?
+	from (irb):41
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :042 > 
+ruby-1.9.2-p180 :043 >   
+ruby-1.9.2-p180 :044 >   nil.to_s.empty?
+ => true 
+ruby-1.9.2-p180 :045 > "foo".nil?
+ => false 
+ruby-1.9.2-p180 :046 > "".nil?
+ => false 
+ruby-1.9.2-p180 :047 > nil.nil?
+ => true 
+ruby-1.9.2-p180 :048 > 
+ruby-1.9.2-p180 :049 >   
+ruby-1.9.2-p180 :050 >   
+ruby-1.9.2-p180 :051 >   
+ruby-1.9.2-p180 :052 >   title
+NameError: undefined local variable or method `title' for main:Object
+	from (irb):52
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :053 > 
+ruby-1.9.2-p180 :054 >   
+ruby-1.9.2-p180 :055 >   @title
+ => nil 
+ruby-1.9.2-p180 :056 > puts "there is no such instance variable" if @title.nil?
+there is no such instance variable
+ => nil 
+ruby-1.9.2-p180 :057 > 
+ruby-1.9.2-p180 :058 >   string = "foobar"
+ => "foobar" 
+ruby-1.9.2-p180 :059 > puts "the string '#{string}' is nonempty" unless string.empty
+NoMethodError: undefined method `empty' for "foobar":String
+	from (irb):59
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :060 > puts "the string '#{string}' is nonempty" unless string.empty?
+the string 'foobar' is nonempty
+ => nil 
+ruby-1.9.2-p180 :061 > if nil
+ruby-1.9.2-p180 :062?>   ture
+ruby-1.9.2-p180 :063?>   end
+ => nil 
+ruby-1.9.2-p180 :064 > if nil
+ruby-1.9.2-p180 :065?>   true
+ruby-1.9.2-p180 :066?>   else
+ruby-1.9.2-p180 :067 >     false
+ruby-1.9.2-p180 :068?>   end
+ => false 
+ruby-1.9.2-p180 :069 > if 0
+ruby-1.9.2-p180 :070?>   true
+ruby-1.9.2-p180 :071?>   else
+ruby-1.9.2-p180 :072 >     false
+ruby-1.9.2-p180 :073?>   end
+ => true 
+ruby-1.9.2-p180 :074 > def string_message(string)
+ruby-1.9.2-p180 :075?>   if string.empty?
+ruby-1.9.2-p180 :076?>     "it is an empty string"
+ruby-1.9.2-p180 :077?>     else
+ruby-1.9.2-p180 :078 >       "the string is nonempty"
+ruby-1.9.2-p180 :079?>     end
+ruby-1.9.2-p180 :080?>   end
+ => nil 
+ruby-1.9.2-p180 :081 > puts string_message("")
+it is an empty string
+ => nil 
+ruby-1.9.2-p180 :082 > puts string_message("hello")
+the string is nonempty
+ => nil 
+ruby-1.9.2-p180 :083 > def string_message(string)
+ruby-1.9.2-p180 :084?>   return "it is an empty string!" if string.empty?
+ruby-1.9.2-p180 :085?>   return "the string is nonempty" 
+ruby-1.9.2-p180 :086?>   end
+ => nil 
+ruby-1.9.2-p180 :087 > puts string_message("")
+it is an empty string!
+ => nil 
+ruby-1.9.2-p180 :088 > puts string_message("hello")
+the string is nonempty
+ => nil 
+ruby-1.9.2-p180 :089 > "foo bar    bas".split
+ => ["foo", "bar", "bas"] 
+ruby-1.9.2-p180 :090 > "forxbarxsplitx".split('x')
+ => ["for", "bar", "split"] 
+ruby-1.9.2-p180 :091 > a = [42, 8, 17]
+ => [42, 8, 17] 
+ruby-1.9.2-p180 :092 > a[0]
+ => 42 
+ruby-1.9.2-p180 :093 > a[1]
+ => 8 
+ruby-1.9.2-p180 :094 > a[2]
+ => 17 
+ruby-1.9.2-p180 :095 > a[-1]
+ => 17 
+ruby-1.9.2-p180 :096 > a
+ => [42, 8, 17] 
+ruby-1.9.2-p180 :097 > a.first
+ => 42 
+ruby-1.9.2-p180 :098 > a.second
+ => 8 
+ruby-1.9.2-p180 :099 > a.last
+ => 17 
+ruby-1.9.2-p180 :100 > a.last == a[-1]
+ => true 
+ruby-1.9.2-p180 :101 > x = a.length
+ => 3 
+ruby-1.9.2-p180 :102 > x == 3
+ => true 
+ruby-1.9.2-p180 :103 > x == 1
+ => false 
+ruby-1.9.2-p180 :104 > x != 1
+ => true 
+ruby-1.9.2-p180 :105 > x >= 1
+ => true 
+ruby-1.9.2-p180 :106 > x < 1
+ => false 
+ruby-1.9.2-p180 :107 > a.sort
+ => [8, 17, 42] 
+ruby-1.9.2-p180 :108 > a.reverse
+ => [17, 8, 42] 
+ruby-1.9.2-p180 :109 > a.shuffle
+ => [42, 17, 8] 
+ruby-1.9.2-p180 :110 > a.shuffle
+ => [17, 42, 8] 
+ruby-1.9.2-p180 :111 > a.shuffle
+ => [17, 8, 42] 
+ruby-1.9.2-p180 :112 > a << 7
+ => [42, 8, 17, 7] 
+ruby-1.9.2-p180 :113 > a << "foo" << 'bar'
+ => [42, 8, 17, 7, "foo", "bar"] 
+ruby-1.9.2-p180 :114 > a.join
+ => "428177foobar" 
+ruby-1.9.2-p180 :115 > a.join(', ')
+ => "42, 8, 17, 7, foo, bar" 
+ruby-1.9.2-p180 :116 > 
+ruby-1.9.2-p180 :117 >   
+ruby-1.9.2-p180 :118 >   
+ruby-1.9.2-p180 :119 >   
+ruby-1.9.2-p180 :120 >   0..9
+ => 0..9 
+ruby-1.9.2-p180 :121 > 0..9.to_a
+NoMethodError: undefined method `to_a' for 9:Fixnum
+	from (irb):121
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :122 > 
+ruby-1.9.2-p180 :123 >   
+ruby-1.9.2-p180 :124 >   
+ruby-1.9.2-p180 :125 >   (0..9).to_a
+ => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 
+ruby-1.9.2-p180 :126 > 
+ruby-1.9.2-p180 :127 >   
+ruby-1.9.2-p180 :128 >   a = %w[foo bar baz quux]
+ => ["foo", "bar", "baz", "quux"] 
+ruby-1.9.2-p180 :129 > a[0..2]
+ => ["foo", "bar", "baz"] 
+ruby-1.9.2-p180 :130 > 
+ruby-1.9.2-p180 :131 >   
+ruby-1.9.2-p180 :132 >   
+ruby-1.9.2-p180 :133 >   ('a'..'e').to_a
+ => ["a", "b", "c", "d", "e"] 
+ruby-1.9.2-p180 :134 > 
+ruby-1.9.2-p180 :135 >   
+ruby-1.9.2-p180 :136 >   
+ruby-1.9.2-p180 :137 >   (1..5).each { |i| puts 2 * i }
+2
+4
+6
+8
+10
+ => 1..5 
+ruby-1.9.2-p180 :138 > ((1..5).each { |i| puts 2 * i }).each {|i| puts 10*i}
+2
+4
+6
+8
+10
+10
+20
+30
+40
+50
+ => 1..5 
+ruby-1.9.2-p180 :139 > 
+ruby-1.9.2-p180 :140 >   
+ruby-1.9.2-p180 :141 >   
+ruby-1.9.2-p180 :142 >   (1..5).each do |i|
+ruby-1.9.2-p180 :143 >     puts 2*i
+ruby-1.9.2-p180 :144?>   end
+2
+4
+6
+8
+10
+ => 1..5 
+ruby-1.9.2-p180 :145 > (1..5).each do |i|
+ruby-1.9.2-p180 :146 >     puts 2*i
+ruby-1.9.2-p180 :147?>   puts '----'
+ruby-1.9.2-p180 :148?>   end
+2
+----
+4
+----
+6
+----
+8
+----
+10
+----
+ => 1..5 
+ruby-1.9.2-p180 :149 > 3.times { puts "hello" }
+hello
+hello
+hello
+ => 3 
+ruby-1.9.2-p180 :150 > (1..5).map { |i| i**2 }
+ => [1, 4, 9, 16, 25] 
+ruby-1.9.2-p180 :151 > %w[a b c]
+ => ["a", "b", "c"] 
+ruby-1.9.2-p180 :152 > %w[a b c].map { |char| char.upcase }
+ => ["A", "B", "C"] 
+ruby-1.9.2-p180 :153 > ('a'..'z').to_a.shuffle[0..7].join
+ => "bahrgktq" 
+ruby-1.9.2-p180 :154 > ('a'..'z').to_a.shuffle[0..7].join
+ => "hovqjrwf" 
+ruby-1.9.2-p180 :155 > ('a'..'z').to_a.shuffle[0..7].join
+ => "umriahjo" 
+ruby-1.9.2-p180 :156 > ('a'..'z').to_a.shuffle[0..7].join
+ => "hjwansgr" 
+ruby-1.9.2-p180 :157 > ('a'..'z').to_a.shuffle[0..7].join
+ => "lbaxgdqo" 
+ruby-1.9.2-p180 :158 > ('a'..'z').to_a.shuffle[0..7].join
+ => "bhnzfait" 
+ruby-1.9.2-p180 :159 > ('a'..'z')
+ => "a".."z" 
+ruby-1.9.2-p180 :160 > ('a'..'z').to_a
+ => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] 
+ruby-1.9.2-p180 :161 > ('a'..'z').to_a.shuffle
+ => ["h", "x", "m", "p", "q", "v", "j", "w", "c", "l", "d", "f", "b", "y", "i", "o", "a", "u", "n", "k", "g", "e", "t", "r", "z", "s"] 
+ruby-1.9.2-p180 :162 > ('a'..'z').to_a.shuffle
+ => ["j", "c", "r", "p", "l", "v", "w", "g", "q", "x", "z", "b", "k", "n", "a", "d", "s", "i", "m", "e", "t", "y", "u", "f", "h", "o"] 
+ruby-1.9.2-p180 :163 > ('a'..'z').to_a.shuffle
+ => ["k", "a", "g", "x", "c", "b", "t", "h", "w", "m", "e", "o", "p", "j", "q", "l", "d", "v", "r", "f", "i", "n", "u", "z", "s", "y"] 
+ruby-1.9.2-p180 :164 > ('a'..'z').to_a.shuffle
+ => ["y", "n", "r", "v", "x", "l", "h", "c", "k", "z", "e", "t", "a", "d", "s", "m", "f", "w", "j", "b", "i", "u", "p", "g", "q", "o"] 
+ruby-1.9.2-p180 :165 > ('a'..'z').to_a.shuffle[0..7]
+ => ["z", "q", "x", "o", "l", "h", "s", "k"] 
+ruby-1.9.2-p180 :166 > ('a'..'z').to_a.shuffle[0..7]
+ => ["d", "w", "h", "x", "y", "u", "c", "m"] 
+ruby-1.9.2-p180 :167 > ('a'..'z').to_a.shuffle[0..7]
+ => ["r", "g", "m", "a", "w", "z", "t", "x"] 
+ruby-1.9.2-p180 :168 > 
+ruby-1.9.2-p180 :169 >   
+ruby-1.9.2-p180 :170 >   
+ruby-1.9.2-p180 :171 >   
+ruby-1.9.2-p180 :172 >   
+ruby-1.9.2-p180 :173 >   user = {}
+ => {} 
+ruby-1.9.2-p180 :174 > user["first_name"] = "Michael"
+ => "Michael" 
+ruby-1.9.2-p180 :175 > user["last_name"] = "Hartl"
+ => "Hartl" 
+ruby-1.9.2-p180 :176 > user['first_name']
+ => "Michael" 
+ruby-1.9.2-p180 :177 > user
+ => {"first_name"=>"Michael", "last_name"=>"Hartl"} 
+ruby-1.9.2-p180 :178 > 
+ruby-1.9.2-p180 :179 >   
+ruby-1.9.2-p180 :180 >   
+ruby-1.9.2-p180 :181 >   
+ruby-1.9.2-p180 :182 >   
+ruby-1.9.2-p180 :183 >   "name".split
+ => ["name"] 
+ruby-1.9.2-p180 :184 > "name".split('')
+ => ["n", "a", "m", "e"] 
+ruby-1.9.2-p180 :185 > 
+ruby-1.9.2-p180 :186 >   
+ruby-1.9.2-p180 :187 >   "foobar".reverse
+ => "raboof" 
+ruby-1.9.2-p180 :188 > :foobar
+ => :foobar 
+ruby-1.9.2-p180 :189 > :foobar.split('')
+NoMethodError: undefined method `split' for :foobar:Symbol
+	from (irb):189
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :190 > 
+ruby-1.9.2-p180 :191 >   
+ruby-1.9.2-p180 :192 >   
+ruby-1.9.2-p180 :193 >   :foobar
+ => :foobar 
+ruby-1.9.2-p180 :194 > :foobar.reverse
+NoMethodError: undefined method `reverse' for :foobar:Symbol
+	from (irb):194
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :195 > 
+ruby-1.9.2-p180 :196 >   
+ruby-1.9.2-p180 :197 >   
+ruby-1.9.2-p180 :198 >   user = {:name => "Michael Hartl", :email => "michael@example.com" }
+ => {:name=>"Michael Hartl", :email=>"michael@example.com"} 
+ruby-1.9.2-p180 :199 > 
+ruby-1.9.2-p180 :200 >   
+ruby-1.9.2-p180 :201 >   
+ruby-1.9.2-p180 :202 >   user[:name]
+ => "Michael Hartl" 
+ruby-1.9.2-p180 :203 > user[:email]
+ => "michael@example.com" 
+ruby-1.9.2-p180 :204 > user
+ => {:name=>"Michael Hartl", :email=>"michael@example.com"} 
+ruby-1.9.2-p180 :205 > 
+ruby-1.9.2-p180 :206 >   
+ruby-1.9.2-p180 :207 >   user[:password]
+ => nil 
+ruby-1.9.2-p180 :208 > 
+ruby-1.9.2-p180 :209 >   
+ruby-1.9.2-p180 :210 >   user.merge! {:password => "hello"}
+SyntaxError: (irb):210: syntax error, unexpected tASSOC, expecting '}'
+user.merge! {:password => "hello"}
+                         ^
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :211 > user.merge!( {:password => "hello"})
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :212 > 
+ruby-1.9.2-p180 :213 >   
+ruby-1.9.2-p180 :214 >   
+ruby-1.9.2-p180 :215 >   user
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :216 > 
+ruby-1.9.2-p180 :217 >   
+ruby-1.9.2-p180 :218 >   
+ruby-1.9.2-p180 :219 >   
+ruby-1.9.2-p180 :220 >   
+ruby-1.9.2-p180 :221 >   params = {}
+ => {} 
+ruby-1.9.2-p180 :222 > params[:user] = user
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :223 > params
+ => {:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}} 
+ruby-1.9.2-p180 :224 > params[:user]
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :225 > params[:user][:name]
+ => "Michael Hartl" 
+ruby-1.9.2-p180 :226 > params[:user][:email]
+ => "michael@example.com" 
+ruby-1.9.2-p180 :227 > 
+ruby-1.9.2-p180 :228 >   
+ruby-1.9.2-p180 :229 >   flash = {:success => "it worked", :error => "it failed"}
+ => {:success=>"it worked", :error=>"it failed"} 
+ruby-1.9.2-p180 :230 > 
+ruby-1.9.2-p180 :231 >   
+ruby-1.9.2-p180 :232 >   
+ruby-1.9.2-p180 :233 >   flash.each do |key, value|
+ruby-1.9.2-p180 :234 >     puts "Key #{key.inspect} has value #{value.inspect}"
+ruby-1.9.2-p180 :235?>   end
+Key :success has value "it worked"
+Key :error has value "it failed"
+ => {:success=>"it worked", :error=>"it failed"} 
+ruby-1.9.2-p180 :236 > 
+ruby-1.9.2-p180 :237 >   
+ruby-1.9.2-p180 :238 >   
+ruby-1.9.2-p180 :239 >   
+ruby-1.9.2-p180 :240 >   puts (1..5).to_a
+1
+2
+3
+4
+5
+ => nil 
+ruby-1.9.2-p180 :241 > puts (1..5).to_a.inspect
+[1, 2, 3, 4, 5]
+ => nil 
+ruby-1.9.2-p180 :242 > 
+ruby-1.9.2-p180 :243 >   
+ruby-1.9.2-p180 :244 >   
+ruby-1.9.2-p180 :245 >   puts :name, :name.inspect
+name
+:name
+ => nil 
+ruby-1.9.2-p180 :246 > 
+ruby-1.9.2-p180 :247 >   
+ruby-1.9.2-p180 :248 >   puts "It worked", "It worked!".inspect
+It worked
+"It worked!"
+ => nil 
+ruby-1.9.2-p180 :249 > params.inspect
+ => "{:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}}" 
+ruby-1.9.2-p180 :250 > p inspect
+"main"
+ => "main" 
+ruby-1.9.2-p180 :251 > p params
+{:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}}
+ => {:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}} 
+ruby-1.9.2-p180 :252 > params
+ => {:user=>{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}} 
+ruby-1.9.2-p180 :253 > 
+ruby-1.9.2-p180 :254 >   
+ruby-1.9.2-p180 :255 >   
+ruby-1.9.2-p180 :256 >   p user
+{:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"}
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :257 > user
+ => {:name=>"Michael Hartl", :email=>"michael@example.com", :password=>"hello"} 
+ruby-1.9.2-p180 :258 > 
+ruby-1.9.2-p180 :259 >   
+ruby-1.9.2-p180 :260 >   
+ruby-1.9.2-p180 :261 >   
+ruby-1.9.2-p180 :262 >   
+ruby-1.9.2-p180 :263 >   
+ruby-1.9.2-p180 :264 >   
+ruby-1.9.2-p180 :265 >   
+ruby-1.9.2-p180 :266 >   
+ruby-1.9.2-p180 :267 >   
+ruby-1.9.2-p180 :268 >   
+ruby-1.9.2-p180 :269 >   
+ruby-1.9.2-p180 :270 >   
+ruby-1.9.2-p180 :271 >   
+ruby-1.9.2-p180 :272 >   
+ruby-1.9.2-p180 :273 >   s = "foobar"
+ => "foobar" 
+ruby-1.9.2-p180 :274 > s.class
+ => String 
+ruby-1.9.2-p180 :275 > 
+ruby-1.9.2-p180 :276 >   
+ruby-1.9.2-p180 :277 >   
+ruby-1.9.2-p180 :278 >   s = String.new "foobar"
+ => "foobar" 
+ruby-1.9.2-p180 :279 > s.class
+ => String 
+ruby-1.9.2-p180 :280 > s == "foobar"
+ => true 
+ruby-1.9.2-p180 :281 > a = Array.new( [1,2,3])
+ => [1, 2, 3] 
+ruby-1.9.2-p180 :282 > h = Hash.new
+ => {} 
+ruby-1.9.2-p180 :283 > h[:foo]
+ => nil 
+ruby-1.9.2-p180 :284 > h = Hash.new(0)
+ => {} 
+ruby-1.9.2-p180 :285 > h[:foo]
+ => 0 
+ruby-1.9.2-p180 :286 > 
+ruby-1.9.2-p180 :287 >   
+ruby-1.9.2-p180 :288 >   
+ruby-1.9.2-p180 :289 >   
+ruby-1.9.2-p180 :290 >   s = String.new("foobaar")
+ => "foobaar" 
+ruby-1.9.2-p180 :291 > s.class
+ => String 
+ruby-1.9.2-p180 :292 > s.class.super
+s.class.superclass                      s.class.superclass_delegating_accessor  s.class.superset?                       
+ruby-1.9.2-p180 :292 > s.class.super
+s.class.superclass                      s.class.superclass_delegating_accessor  s.class.superset?                       
+ruby-1.9.2-p180 :292 > s.class.superclass
+ => Object 
+ruby-1.9.2-p180 :293 > s.class.superclass.super
+s.class.superclass.superclass                      s.class.superclass.superclass_delegating_accessor  s.class.superclass.superset?                       
+ruby-1.9.2-p180 :293 > s.class.superclass.super
+s.class.superclass.superclass                      s.class.superclass.superclass_delegating_accessor  s.class.superclass.superset?                       
+ruby-1.9.2-p180 :293 > s.class.superclass.superclass
+ => BasicObject 
+ruby-1.9.2-p180 :294 > s.class.superclass.superclass.superclass
+ => nil 
+ruby-1.9.2-p180 :295 > 
+ruby-1.9.2-p180 :296 >   
+ruby-1.9.2-p180 :297 >   
+ruby-1.9.2-p180 :298 >   
+ruby-1.9.2-p180 :299 >   
+ruby-1.9.2-p180 :300 >   
+ruby-1.9.2-p180 :301 >   
+ruby-1.9.2-p180 :302 >   
+ruby-1.9.2-p180 :303 >   
+ruby-1.9.2-p180 :304 >   class Word
+ruby-1.9.2-p180 :305?>   def palindrome?(string)
+ruby-1.9.2-p180 :306?>     string == string.reverse
+ruby-1.9.2-p180 :307?>     end
+ruby-1.9.2-p180 :308?>   end
+ => nil 
+ruby-1.9.2-p180 :309 > w = Word.new
+ => #<Word:0x000001040824b0> 
+ruby-1.9.2-p180 :310 > w.palindrome?("foobar")
+ => false 
+ruby-1.9.2-p180 :311 > w.palindrome?("level")
+ => true 
+ruby-1.9.2-p180 :312 > 
+ruby-1.9.2-p180 :313 >   
+ruby-1.9.2-p180 :314 >   
+ruby-1.9.2-p180 :315 >   
+ruby-1.9.2-p180 :316 >   class Word < String
+ruby-1.9.2-p180 :317?>   def palindrome?
+ruby-1.9.2-p180 :318?>     self == self.reverse
+ruby-1.9.2-p180 :319?>     end
+ruby-1.9.2-p180 :320?>   end
+TypeError: superclass mismatch for class Word
+	from (irb):316
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :321 > Word
+ => Word 
+ruby-1.9.2-p180 :322 > Word.class
+ => Class 
+ruby-1.9.2-p180 :323 > Word.class.supercalss
+NoMethodError: undefined method `supercalss' for Class:Class
+	from (irb):323
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :324 > Word.class.superclass
+ => Module 
+ruby-1.9.2-p180 :325 > class HanisWord < String
+ruby-1.9.2-p180 :326?>   def palindrome?
+ruby-1.9.2-p180 :327?>     self == self.reverse
+ruby-1.9.2-p180 :328?>     end
+ruby-1.9.2-p180 :329?>   end
+ => nil 
+ruby-1.9.2-p180 :330 > s = HanisWord.new("level")
+ => "level" 
+ruby-1.9.2-p180 :331 > s
+ => "level" 
+ruby-1.9.2-p180 :332 > s.palindrome?
+ => true 
+ruby-1.9.2-p180 :333 > s.length
+ => 5 
+ruby-1.9.2-p180 :334 > s.class
+ => HanisWord 
+ruby-1.9.2-p180 :335 > s.class.superclass
+ => String 
+ruby-1.9.2-p180 :336 > s.class.superclass.superclass
+ => Object 
+ruby-1.9.2-p180 :337 > 
+ruby-1.9.2-p180 :338 >   
+ruby-1.9.2-p180 :339 >   
+ruby-1.9.2-p180 :340 >   
+ruby-1.9.2-p180 :341 >   
+ruby-1.9.2-p180 :342 >   "level".palindrome?
+NoMethodError: undefined method `palindrome?' for "level":String
+	from (irb):342
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :343 > 
+ruby-1.9.2-p180 :344 >   
+ruby-1.9.2-p180 :345 >   
+ruby-1.9.2-p180 :346 >   
+ruby-1.9.2-p180 :347 >   
+ruby-1.9.2-p180 :348 >   
+ruby-1.9.2-p180 :349 >   class String
+ruby-1.9.2-p180 :350?>   def palindrome?
+ruby-1.9.2-p180 :351?>     self == self.reverse
+ruby-1.9.2-p180 :352?>     end
+ruby-1.9.2-p180 :353?>   end
+ => nil 
+ruby-1.9.2-p180 :354 > "level".palindrome?
+ => true 
+ruby-1.9.2-p180 :355 > 
+ruby-1.9.2-p180 :356 >   
+ruby-1.9.2-p180 :357 >   "deified"
+ => "deified" 
+ruby-1.9.2-p180 :358 > "deified".class
+ => String 
+ruby-1.9.2-p180 :359 > "deified".palindrome?
+ => true 
+ruby-1.9.2-p180 :360 > 
+ruby-1.9.2-p180 :361 >   
+ruby-1.9.2-p180 :362 >   
+ruby-1.9.2-p180 :363 >   ""
+ => "" 
+ruby-1.9.2-p180 :364 > "".blank?
+ => true 
+ruby-1.9.2-p180 :365 > "        ".blank?
+ => true 
+ruby-1.9.2-p180 :366 > nil.blank?
+ => true 
+ruby-1.9.2-p180 :367 > 
+ruby-1.9.2-p180 :368 >   
+ruby-1.9.2-p180 :369 >   
+ruby-1.9.2-p180 :370 >   
+ruby-1.9.2-p180 :371 >   controller = PagesController.new
+ => #<PagesController:0x00000102e9ad38 @action_has_layout=true, @view_context_class=nil, @_headers={"Content-Type"=>"text/html"}, status200 
+ruby-1.9.2-p180 :372 > 
+ruby-1.9.2-p180 :373 >   
+ruby-1.9.2-p180 :374 >   
+ruby-1.9.2-p180 :375 >   controller.class
+ => PagesController 
+ruby-1.9.2-p180 :376 > 
+ruby-1.9.2-p180 :377 >   
+ruby-1.9.2-p180 :378 >   
+ruby-1.9.2-p180 :379 >   controller.class.superclass
+ => ApplicationController 
+ruby-1.9.2-p180 :380 > 
+ruby-1.9.2-p180 :381 >   
+ruby-1.9.2-p180 :382 >   
+ruby-1.9.2-p180 :383 >   
+ruby-1.9.2-p180 :384 >   controller.class.superclass.superclass
+ => ActionController::Base 
+ruby-1.9.2-p180 :385 > 
+ruby-1.9.2-p180 :386 >   
+ruby-1.9.2-p180 :387 >   
+ruby-1.9.2-p180 :388 >   controller.class.superclass.superclass.superclass
+ => ActionController::Metal 
+ruby-1.9.2-p180 :389 > 
+ruby-1.9.2-p180 :390 >   
+ruby-1.9.2-p180 :391 >   
+ruby-1.9.2-p180 :392 >   controller.class.superclass.superclass.superclass.superclass
+ => AbstractController::Base 
+ruby-1.9.2-p180 :393 > 
+ruby-1.9.2-p180 :394 >   
+ruby-1.9.2-p180 :395 >   
+ruby-1.9.2-p180 :396 >   controller.class.superclass.superclass.superclass.superclass.superclass
+ => Object 
+ruby-1.9.2-p180 :397 > 
+ruby-1.9.2-p180 :398 >   
+ruby-1.9.2-p180 :399 >   
+ruby-1.9.2-p180 :400 >   controller.home
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:21:in `signed_in?'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/controllers/pages_controller.rb:6:in `home'
+	from (irb):400
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :401 > 
+ruby-1.9.2-p180 :402 >   
+ruby-1.9.2-p180 :403 >   
+ruby-1.9.2-p180 :404 >   controller.action_methods
+ => #<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}> 
+ruby-1.9.2-p180 :405 > controller.action_methods.inspect
+ => "#<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}>" 
+ruby-1.9.2-p180 :406 > 
+ruby-1.9.2-p180 :407 >   
+ruby-1.9.2-p180 :408 >   
+ruby-1.9.2-p180 :409 >   controller.about
+ => "About" 
+ruby-1.9.2-p180 :410 > controller.help
+ => "Help" 
+ruby-1.9.2-p180 :411 > controller.current_user
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from (irb):411
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :412 > 
+ruby-1.9.2-p180 :413 >   
+ruby-1.9.2-p180 :414 >   
+ruby-1.9.2-p180 :415 >   controller.home
+NoMethodError: undefined method `cookie_jar' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/actionpack-3.0.6/lib/action_controller/metal/cookies.rb:13:in `cookies'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:55:in `remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:51:in `user_from_remember_token'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:17:in `current_user'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:21:in `signed_in?'
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/controllers/pages_controller.rb:6:in `home'
+	from (irb):415
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :416 > 
+ruby-1.9.2-p180 :417 >   
+ruby-1.9.2-p180 :418 >   controller.action_methods.inspect
+ => "#<Set: {"home", "contact", "about", "help", "sign_in", "current_user=", "current_user", "signed_in?", "sign_out", "authenticate", "deny_access", "current_user?", "redirect_back_or"}>" 
+ruby-1.9.2-p180 :419 > controller.contact
+ => "Contact" 
+ruby-1.9.2-p180 :420 > controller.sign_in
+ArgumentError: wrong number of arguments (0 for 1)
+	from /Users/helabed/Dropbox/Rails3Class/projects/sample_app/app/helpers/sessions_helper.rb:3:in `sign_in'
+	from (irb):420
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :421 > 
+ruby-1.9.2-p180 :422 >   
+ruby-1.9.2-p180 :423 >   
+ruby-1.9.2-p180 :424 >   require './example_user'
+ => nil 
+ruby-1.9.2-p180 :425 > require './example_user.rb'
+ => nil 
+ruby-1.9.2-p180 :426 > example = User.new
+NoMethodError: undefined method `has_key?' for nil:NilClass
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activesupport-3.0.6/lib/active_support/whiny_nil.rb:48:in `method_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1506:in `has_attribute?'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1666:in `block in inspect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1665:in `collect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/activerecord-3.0.6/lib/active_record/base.rb:1665:in `inspect'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/wirble-0.1.3/lib/wirble.rb:432:in `output_value'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/looksee-1.0.2/lib/looksee/wirble_compatibility.rb:46:in `output_value_with_looksee'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :427 > 
+ruby-1.9.2-p180 :428 >   
+ruby-1.9.2-p180 :429 >   
+ruby-1.9.2-p180 :430 >   require './example_user.rb'
+ => nil 
+ruby-1.9.2-p180 :431 > example = UserHani.new
+NameError: uninitialized constant UserHani
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/rspec-core-2.5.1/lib/rspec/core/backward_compatibility.rb:20:in `const_missing'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/rspec-expectations-2.5.0/lib/rspec/expectations/backward_compatibility.rb:6:in `const_missing'
+	from (irb):431
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :432 > 
+ruby-1.9.2-p180 :433 >   
+ruby-1.9.2-p180 :434 >   
+ruby-1.9.2-p180 :435 >   exit
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ rails c
+Loading development environment (Rails 3.0.6)
+ruby-1.9.2-p180 :001 > require './example_user.rb'
+ => ["UserHani"] 
+ruby-1.9.2-p180 :002 > example = UserHani.new
+ => #<UserHani:0x0000010166b6e0 @name=nil, @email=nil> 
+ruby-1.9.2-p180 :003 > example.name
+ => nil 
+ruby-1.9.2-p180 :004 > example.email
+ => nil 
+ruby-1.9.2-p180 :005 > example.name "Hani Elabed"
+ArgumentError: wrong number of arguments (1 for 0)
+	from (irb):5
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :006 > example.name= "Hani Elabed"
+ => "Hani Elabed" 
+ruby-1.9.2-p180 :007 > example.email = "hani@mani.com"
+ => "hani@mani.com" 
+ruby-1.9.2-p180 :008 > example.name
+ => "Hani Elabed" 
+ruby-1.9.2-p180 :009 > example.email
+ => "hani@mani.com" 
+ruby-1.9.2-p180 :010 > example.formatted_email
+ => "Hani Elabed <hani@mani.com>" 
+ruby-1.9.2-p180 :011 > 
+ruby-1.9.2-p180 :012 >   
+ruby-1.9.2-p180 :013 >   
+ruby-1.9.2-p180 :014 >   user
+NameError: undefined local variable or method `user' for main:Object
+	from (irb):14
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:44:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands/console.rb:8:in `start'
+	from /Users/helabed/.rvm/gems/ruby-1.9.2-p180@sample_app/gems/railties-3.0.6/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p180 :015 > example
+ => #<UserHani:0x0000010166b6e0 @name="Hani Elabed", @email="hani@mani.com"> 
+ruby-1.9.2-p180 :016 > 
+ruby-1.9.2-p180 :017 >   
+ruby-1.9.2-p180 :018 >   
+ruby-1.9.2-p180 :019 >   example
+ => #<UserHani:0x0000010166b6e0 @name="Hani Elabed", @email="hani@mani.com"> 
+ruby-1.9.2-p180 :020 > 
+ruby-1.9.2-p180 :021 >   
+ruby-1.9.2-p180 :022 >   
+ruby-1.9.2-p180 :023 >   
+ruby-1.9.2-p180 :024 >   
+ruby-1.9.2-p180 :025 >   
+ruby-1.9.2-p180 :026 >   
+ruby-1.9.2-p180 :027 >   
+ruby-1.9.2-p180 :028 >   
+ruby-1.9.2-p180 :029 >   
+ruby-1.9.2-p180 :030 >   
+ruby-1.9.2-p180 :031 >   def string_shuffle(s)
+ruby-1.9.2-p180 :032?>   s.split('').shuffle.join(', ')
+ruby-1.9.2-p180 :033?>   end
+ => nil 
+ruby-1.9.2-p180 :034 > string_shuffle("foobar")
+ => "o, b, r, o, a, f" 
+ruby-1.9.2-p180 :035 > string_shuffle("foobar")
+ => "o, o, b, a, r, f" 
+ruby-1.9.2-p180 :036 > string_shuffle("foobar")
+ => "f, o, a, r, o, b" 
+ruby-1.9.2-p180 :037 > string_shuffle("foobar")
+ => "f, o, b, o, a, r" 
+ruby-1.9.2-p180 :038 > 
+ruby-1.9.2-p180 :039 >   
+ruby-1.9.2-p180 :040 >   
+ruby-1.9.2-p180 :041 >   # Above is exercise 4.5.1
+ruby-1.9.2-p180 :042 >   
+ruby-1.9.2-p180 :043 >   
+ruby-1.9.2-p180 :044 >   class String
+ruby-1.9.2-p180 :045?>   def string_shuffle
+ruby-1.9.2-p180 :046?>     self.split('').shuffle.join(', ')
+ruby-1.9.2-p180 :047?>     end
+ruby-1.9.2-p180 :048?>   end
+ => nil 
+ruby-1.9.2-p180 :049 > 
+ruby-1.9.2-p180 :050 >   
+ruby-1.9.2-p180 :051 >   
+ruby-1.9.2-p180 :052 >   "foobar"
+ => "foobar" 
+ruby-1.9.2-p180 :053 > "foobar".class
+ => String 
+ruby-1.9.2-p180 :054 > "foobar".string_shuffle
+ => "r, o, a, o, b, f" 
+ruby-1.9.2-p180 :055 > "foobar".string_shuffle
+ => "a, o, r, f, b, o" 
+ruby-1.9.2-p180 :056 > "foobar".string_shuffle
+ => "f, o, b, a, r, o" 
+ruby-1.9.2-p180 :057 > "foobar".string_shuffle
+ => "r, o, b, f, o, a" 
+ruby-1.9.2-p180 :058 > 
+ruby-1.9.2-p180 :059 >   
+ruby-1.9.2-p180 :060 >   
+ruby-1.9.2-p180 :061 >   # Above is exercise 4.5.2
+ruby-1.9.2-p180 :062 >   
+ruby-1.9.2-p180 :063 >   
+ruby-1.9.2-p180 :064 >   
+ruby-1.9.2-p180 :065 >   person1 = {:first => "oussama", :last => "elabed"}
+ => {:first=>"oussama", :last=>"elabed"} 
+ruby-1.9.2-p180 :066 > 
+ruby-1.9.2-p180 :067 >   
+ruby-1.9.2-p180 :068 >   person2 = {:first => "siham", :last => "elabed"}
+ => {:first=>"siham", :last=>"elabed"} 
+ruby-1.9.2-p180 :069 > 
+ruby-1.9.2-p180 :070 >   
+ruby-1.9.2-p180 :071 >   person3 = {:first => "hani", :last => "elabed"}
+ => {:first=>"hani", :last=>"elabed"} 
+ruby-1.9.2-p180 :072 > 
+ruby-1.9.2-p180 :073 >   
+ruby-1.9.2-p180 :074 >   params = {:father => person1, :mother => person2, :child => person3}
+ => {:father=>{:first=>"oussama", :last=>"elabed"}, :mother=>{:first=>"siham", :last=>"elabed"}, :child=>{:first=>"hani", :last=>"elabed"}} 
+ruby-1.9.2-p180 :075 > 
+ruby-1.9.2-p180 :076 >   
+ruby-1.9.2-p180 :077 >   params
+ => {:father=>{:first=>"oussama", :last=>"elabed"}, :mother=>{:first=>"siham", :last=>"elabed"}, :child=>{:first=>"hani", :last=>"elabed"}} 
+ruby-1.9.2-p180 :078 > 
+ruby-1.9.2-p180 :079 >   
+ruby-1.9.2-p180 :080 >   
+ruby-1.9.2-p180 :081 >   params[:father]
+ => {:first=>"oussama", :last=>"elabed"} 
+ruby-1.9.2-p180 :082 > 
+ruby-1.9.2-p180 :083 >   
+ruby-1.9.2-p180 :084 >   params[:father][:first]
+ => "oussama" 
+ruby-1.9.2-p180 :085 > 
+ruby-1.9.2-p180 :086 >   
+ruby-1.9.2-p180 :087 >   
+ruby-1.9.2-p180 :088 >   
+ruby-1.9.2-p180 :089 >   # Above is exercise 4.5.3
+ruby-1.9.2-p180 :090 >   
+ruby-1.9.2-p180 :091 >   
+ruby-1.9.2-p180 :092 >   exit
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ exit
+exit
+
+Script done, output file is hanis_ch_4_script_log_file.log
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
+helabed@hani-elabeds-MacBook-Pro:~/Dropbox/Rails3Class/projects/sample_app(following-users) $ 
